@@ -1,0 +1,24 @@
+{
+  "name": "threejs",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "compute:widths": "node ./tools/computeWidths.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1",
+    "rollup": "^4.62.2",
+    "vite": "^8.0.12",
+    "vite-plugin-top-level-await": "^1.6.0",
+    "vite-plugin-wasm": "^3.6.0"
+  },
+  "dependencies": {
+    "@dimforge/rapier3d-compat": "^0.19.3",
+    "@gltf-transform/core": "^4.4.0",
+    "three": "^0.184.0"
+  }
+}
