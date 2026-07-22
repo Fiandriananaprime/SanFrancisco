@@ -1,0 +1,24 @@
+CharacterArmature|Death
+adventurer.js:64 CharacterArmature|Gun_Shoot
+adventurer.js:64 CharacterArmature|HitRecieve
+adventurer.js:64 CharacterArmature|HitRecieve_2
+adventurer.js:64 CharacterArmature|Idle
+adventurer.js:64 CharacterArmature|Idle_Gun
+adventurer.js:64 CharacterArmature|Idle_Gun_Pointing
+adventurer.js:64 CharacterArmature|Idle_Gun_Shoot
+adventurer.js:64 CharacterArmature|Idle_Neutral
+adventurer.js:64 CharacterArmature|Idle_Sword
+adventurer.js:64 CharacterArmature|Interact
+adventurer.js:64 CharacterArmature|Kick_Left
+adventurer.js:64 CharacterArmature|Kick_Right
+adventurer.js:64 CharacterArmature|Punch_Left
+adventurer.js:64 CharacterArmature|Punch_Right
+adventurer.js:64 CharacterArmature|Roll
+adventurer.js:64 CharacterArmature|Run
+adventurer.js:64 CharacterArmature|Run_Back
+adventurer.js:64 CharacterArmature|Run_Left
+adventurer.js:64 CharacterArmature|Run_Right
+adventurer.js:64 CharacterArmature|Run_Shoot
+adventurer.js:64 CharacterArmature|Sword_Slash
+adventurer.js:64 CharacterArmature|Walk
+adventurer.js:64 CharacterArmature|Wave

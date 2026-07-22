@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#minimap-container {
+    position: absolute;
+    top:20px;
+    left:20px;
+    border-radius: 50%;
+    width: 190;
+    height: 190;
+    overflow: hidden;
+    box-shadow: 0 0 20px white;
+}
