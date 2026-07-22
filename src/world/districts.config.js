@@ -1,9 +1,4 @@
 
-
-
-
-
-
 const CHUNK_SIZE = 100;
 
 function makeGridDistrict({ name, bounds, chunkRadius, objectFactory }) {

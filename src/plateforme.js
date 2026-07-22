@@ -2,8 +2,8 @@ import * as THREE from 'three';
 import { RAPIER } from './physics.js';
 import { addClouds } from './nuage.js';
 
-const width = 200;
-const length = 200;
+const width = 2000;
+const length = 2000;
 
 
 export function createPlatform(scene, world) {
@@ -20,7 +20,7 @@ export function createPlatform(scene, world) {
 
   
   const platformGeo = new THREE.CylinderGeometry(radius, radius, 1, 64);
-  const platformMat = new THREE.MeshStandardMaterial({ color: 0x4caf50, roughness: 0.9 });
+  const platformMat = new THREE.MeshStandardMaterial({ color: 'green', roughness: 0.9 });
   const platform = new THREE.Mesh(platformGeo, platformMat);
   platform.position.y = -0.5;
   platform.receiveShadow = true;
@@ -34,7 +34,7 @@ export function createPlatform(scene, world) {
     world.createCollider(colliderDesc, body);
   }
 
-  addClouds(scene, { count: 40, height: 60, spread: width * 2.5 });
+  addClouds(scene, { count:2000, height: 200, spread: width * 2.5, puffsPerCloud: 7 });
 
   return { ocean, platform, radius, width, length };
 }

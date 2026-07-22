@@ -3,10 +3,9 @@ import { scene, clock } from './scene.js';
 import { initPhysics, getWorld } from './physics.js';
 import { createPlatform } from './plateforme.js';
 import { Adventurer } from './adventurer.js';
-import { DistrictManager } from './world/districtManager.js';
-import { districts } from './world/districts.config.js';
 import { followTarget } from './minimap.js';
-
+import { Astronaut } from './pnj/astronaut.js';
+import { Farmer } from './pnj/farmer.js';
 const container = document.getElementById('main-container');
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -16,19 +15,23 @@ renderer.shadowMap.enabled = true;
 container.appendChild(renderer.domElement);
 
 let adventurer;
-let districtManager;
-
+let astronaut;
+let farmer;
 async function init() {
   await initPhysics();
   const world = getWorld();
 
   createPlatform(scene, world);
-
+   astronaut = new Astronaut(scene, world);
+   farmer = new Farmer(scene, world);
+  await farmer.load();
+  await astronaut.load();
   adventurer = new Adventurer(scene, world);
-  await adventurer.load('/models/adventurer.glb');
+  await adventurer.load('../assets/cityPack/Player.glb');
+  adventurer.model.scale.multiplyScalar(1);
   followTarget(adventurer.model);
 
-  districtManager = new DistrictManager(scene, districts);
+  
 
   
   
@@ -48,8 +51,8 @@ function animate() {
 
   getWorld().step();
   adventurer.update(delta);
-  districtManager.update(adventurer.model.position);
-
+  astronaut.update();
+  farmer.update();
   renderer.render(scene, adventurer.camera);
 }
 
